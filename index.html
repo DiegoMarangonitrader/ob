@@ -171,17 +171,6 @@
 
         .founder-content { display: flex; flex-direction: column; align-items: center; }
 
-        .founder-photo {
-            border-radius: 20px;
-            max-width: 400px;
-            width: 100%;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border: 3px solid var(--primary-green);
-            aspect-ratio: 3/4;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-
         /* Testimonials */
         .testimonials { padding: 80px 0; background: #0f0f0f; }
 
@@ -312,7 +301,6 @@
             </div>
             <div class="founder-content">
                 <!-- Substituir pela foto do Diego (foto com Porsche) -->
-                <img src="images/diego.jpg" alt="Diego Marangoni" class="founder-photo">
                 <span class="badge-free" data-i18n="founder_badge">Fundador da Sala de Sinais VIP</span>
                 <h3 data-i18n="founder_name" style="font-size: 2rem; margin: 15px 0;">Conheça Diego Marangoni</h3>
                 <p data-i18n="founder_bio" style="color: var(--text-gray); max-width: 700px; margin-bottom: 30px;">Olá, sou Diego Marangoni. Há anos opero no mercado de opções binárias e construí minha liberdade financeira através de estratégias consistentes. Criei a Sala de Sinais VIP para compartilhar o que realmente funciona — sem enrolação. Acredito que informação de qualidade não precisa ser cara, por isso abri meu grupo de sinais de forma totalmente gratuita. Meu objetivo é ajudar você a evoluir como trader, recebendo sinais em tempo real e aprendendo com cada análise.</p>
@@ -564,6 +552,7 @@
 
         // Initialize Language
         window.addEventListener('DOMContentLoaded', () => {
+            let userLang = localStorage.getItem('preferredLang') || navigator.language || 'en-US';
             if (userLang.startsWith('pt')) userLang = 'pt-BR';
             else if (userLang.startsWith('es')) userLang = 'es-ES';
             else userLang = 'en-US';
