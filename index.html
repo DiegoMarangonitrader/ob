@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" data-i18n-meta="description" content="Entre para a Sala de Sinais VIP Gratuita e receba análises diárias de opções binárias diretamente no seu Telegram.">
+    <title data-i18n="meta_title">SALA DE SINAIS VIP - Acesso Gratuito</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Meta Tags Open Graph (Social Media) -->
+    <meta property="og:title" data-i18n-meta="og:title" content="SALA DE SINAIS VIP - Gratuito">
+    <meta property="og:description" data-i18n-meta="og:description" content="Receba sinais diários e estratégias validadas no Telegram.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="#">
+
+    <!-- Meta Pixel Code (Placeholder) -->
+    <!-- 
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'SEU_PIXEL_ID_AQUI');
+    fbq('track', 'PageView');
+    </script>
+    -->
+
+    <style>
+        :root {
+            --primary-green: #00E676;
+            --dark-green: #00C853;
+            --gold: #D4AF37;
+            --bg-dark: #0A0A0A;
+            --bg-card: #161616;
+            --text-white: #FFFFFF;
+            --text-gray: #B0B0B0;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 700; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header & Lang Selector */
+        header {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #222;
+        }
+
+        .header-right { display: flex; align-items: center; gap: 20px; }
+
+        .lang-selector { display: flex; gap: 8px; }
+
+        .lang-btn {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            color: #888;
+            padding: 4px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.7rem;
+            font-weight: 700;
+            transition: var(--transition);
+        }
+
+        .lang-btn.active {
+            border-color: var(--primary-green);
+            color: var(--primary-green);
+            background: rgba(0, 230, 118, 0.1);
+        }
+
+        .logo { font-weight: 800; font-size: 1.2rem; letter-spacing: 1px; }
+
+        .badge-free {
+            background: var(--primary-green);
+            color: #000;
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: radial-gradient(circle at top, #1a2e1a 0%, #0a0a0a 70%);
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, var(--primary-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p { font-size: 1.2rem; color: var(--text-gray); max-width: 700px; margin: 0 auto 40px; }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            color: #000;
+            padding: 20px 40px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-decoration: none;
+            box-shadow: 0 10px 20px rgba(0, 230, 118, 0.3);
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.03); } 100% { transform: scale(1); } }
+
+        .urgency-text { margin-top: 20px; font-size: 0.9rem; color: var(--gold); font-weight: 600; }
+
+        .stats-bar { margin-top: 50px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+
+        .stat-item { font-size: 0.9rem; color: var(--text-gray); display: flex; align-items: center; gap: 8px; }
+
+        .stat-item span { color: var(--primary-green); font-weight: 700; }
+
+        /* Benefits */
+        .benefits { padding: 80px 0; background-color: var(--bg-card); }
+
+        .section-title { text-align: center; margin-bottom: 50px; }
+
+        .grid-benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+
+        .benefit-card { background: #1f1f1f; padding: 30px; border-radius: 15px; border: 1px solid #333; transition: var(--transition); }
+
+        .benefit-card:hover { border-color: var(--primary-green); }
+
+        .benefit-card svg { width: 40px; height: 40px; fill: var(--primary-green); margin-bottom: 20px; }
+
+        /* How it works */
+        .how-it-works { padding: 80px 0; }
+
+        .steps { display: flex; flex-direction: column; gap: 40px; max-width: 800px; margin: 0 auto; }
+
+        .step { display: flex; gap: 25px; align-items: flex-start; }
+
+        .step-number { background: var(--primary-green); color: #000; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0; }
+
+        /* Founder Section */
+        .founder { padding: 80px 0; background: #0a0a0a; text-align: center; }
+
+        .founder-content { display: flex; flex-direction: column; align-items: center; }
+
+        /* Testimonials */
+        .testimonials { padding: 80px 0; background: #0f0f0f; }
+
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+
+        .testimonial-card { background: #1a1a1a; padding: 25px; border-radius: 12px; font-style: italic; }
+
+        .author { margin-top: 15px; font-style: normal; font-weight: 700; color: var(--primary-green); display: block; }
+
+        /* FAQ */
+        .faq { padding: 80px 0; }
+
+        .faq-item { margin-bottom: 15px; background: #161616; border-radius: 8px; overflow: hidden; }
+
+        .faq-question { padding: 20px; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; }
+
+        .faq-answer { padding: 0 20px 20px; color: var(--text-gray); font-size: 0.95rem; display: none; }
+
+        .faq-item.active .faq-answer { display: block; }
+
+        /* Footer */
+        footer { padding: 60px 0 30px; border-top: 1px solid #222; text-align: center; }
+
+        .disclaimer { font-size: 0.75rem; color: #666; max-width: 800px; margin: 40px auto 20px; text-align: justify; }
+
+        .copyright { font-size: 0.8rem; color: #444; }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; }
+            .hero h1 { font-size: 2.2rem; }
+            .step { flex-direction: column; text-align: center; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">SALA DE SINAIS VIP</div>
+            <div class="header-right">
+                <div class="lang-selector">
+                    <button class="lang-btn" onclick="setLanguage('pt-BR')" data-lang="pt-BR">PT</button>
+                    <button class="lang-btn" onclick="setLanguage('es-ES')" data-lang="es-ES">ES</button>
+                    <button class="lang-btn" onclick="setLanguage('en-US')" data-lang="en-US">EN</button>
+                </div>
+                <div class="badge-free" data-i18n="header_badge">Acesso Gratuito</div>
+            </div>
+        </header>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <h1 data-i18n="hero_h1">Entre para a Sala de Sinais VIP Gratuita e Comece a Lucrar Hoje</h1>
+            <p data-i18n="hero_p">Receba diariamente análises de mercado e sinais de alta assertividade diretamente no seu celular. Sem mensalidades, sem pegadinhas.</p>
+            
+            <a href="#" id="cta-telegram" class="cta-button" data-i18n="cta_main">ENTRAR NO GRUPO VIP GRATUITO</a>
+
+            <p class="urgency-text" data-i18n="urgency">⚠️ Restam apenas 14 vagas gratuitas disponíveis</p>
+
+            <div class="stats-bar">
+                <div class="stat-item"><span>+12.400</span> <span data-i18n="stat_members">Membros Ativos</span></div>
+                <div class="stat-item"><span>87%</span> <span data-i18n="stat_accuracy">Assertividade Média</span></div>
+                <div class="stat-item"><span>24/7</span> <span data-i18n="stat_support">Suporte</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="benefits_title">Por que participar do nosso grupo?</h2>
+            </div>
+            <div class="grid-benefits">
+                <div class="benefit-card">
+                    <svg viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.45l8.27 14.3H3.73L12 5.45zM11 16h2v2h-2v-2zm0-6h2v4h-2v-4z"/></svg>
+                    <h3 data-i18n="benefit1_h3">Sinais em Tempo Real</h3>
+                    <p data-i18n="benefit1_p">Notificações instantâneas com par de moedas, direção e tempo de expiração.</p>
+                </div>
+                <div class="benefit-card">
+                    <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z"/></svg>
+                    <h3 data-i18n="benefit2_h3">Análises Técnicas</h3>
+                    <p data-i18n="benefit2_p">Não enviamos apenas sinais, compartilhamos a visão por trás de cada entrada.</p>
+                </div>
+                <div class="benefit-card">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"/></svg>
+                    <h3 data-i18n="benefit3_h3">100% Gratuito</h3>
+                    <p data-i18n="benefit3_p">Você não paga nada para entrar e permanecer no grupo VIP de sinais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="how_title">Como funciona em 3 passos</h2>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3 data-i18n="step1_h3">Entre no Grupo</h3>
+                        <p data-i18n="step1_p">Clique no botão de acesso e entre instantaneamente na nossa comunidade no Telegram.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3 data-i18n="step2_h3">Receba as Notificações</h3>
+                        <p data-i18n="step2_p">Fique atento ao seu celular. Nossos analistas enviam as oportunidades assim que identificadas.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3 data-i18n="step3_h3">Copie e Acompanhe</h3>
+                        <p data-i18n="step3_p">Execute as operações na sua corretora de preferência e acompanhe os resultados diários.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="founder">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="founder_title">QUEM ESTÁ POR TRÁS</h2>
+            </div>
+            <div class="founder-content">
+                <div style="width: 180px; height: 180px; background: #333; border-radius: 50%; margin-bottom: 20px; border: 3px solid var(--primary-green);"></div>
+                <span class="badge-free" data-i18n="founder_badge">Fundador da Sala de Sinais VIP</span>
+                <h3 data-i18n="founder_name" style="font-size: 2rem; margin: 15px 0;">Conheça Victor Paixão</h3>
+                <p data-i18n="founder_bio" style="color: var(--text-gray); max-width: 700px; margin-bottom: 30px;">Com mais de 7 anos de experiência no mercado financeiro, Victor Paixão desenvolveu metodologias exclusivas para identificar padrões de alta probabilidade. Sua missão é democratizar o acesso a análises profissionais.</p>
+                <div class="stats-bar">
+                    <div class="stat-item"><span data-i18n="founder_tag1">Trader experiente</span></div>
+                    <div class="stat-item"><span data-i18n="founder_tag2">Análises diárias</span></div>
+                    <div class="stat-item"><span data-i18n="founder_tag3">Comunidade ativa</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="testi_title">O que dizem nossos membros</h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <span data-i18n="testi1_text">"No começo achei que era golpe por ser de graça, mas os sinais são realmente profissionais. Recomendo muito!"</span>
+                    <span class="author">Ricardo S.</span>
+                </div>
+                <div class="testimonial-card">
+                    <span data-i18n="testi2_text">"A assertividade é incrível. O grupo me ajudou a entender melhor o mercado enquanto eu lucrava com os sinais."</span>
+                    <span class="author">Amanda Oliveira</span>
+                </div>
+                <div class="testimonial-card">
+                    <span data-i18n="testi3_text">"Melhor sala de sinais que já participei. Sem enrolação e direto ao ponto."</span>
+                    <span class="author">Marcos Vinícius</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="faq_title">Dúvidas Frequentes</h2>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><span data-i18n="faq1_q">É realmente gratuito?</span> <span>+</span></div>
+                <div class="faq-answer" data-i18n="faq1_a">Sim, o acesso ao nosso grupo VIP de sinais no Telegram é 100% gratuito. Não cobramos mensalidades nem taxas de adesão.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><span data-i18n="faq2_q">Preciso ter experiência?</span> <span>+</span></div>
+                <div class="faq-answer" data-i18n="faq2_a">Não. Nossos sinais são fáceis de seguir, ideais tanto para iniciantes quanto para traders experientes que buscam otimizar seu tempo.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><span data-i18n="faq3_q">Quais horários os sinais são enviados?</span> <span>+</span></div>
+                <div class="faq-answer" data-i18n="faq3_a">Enviamos sinais nos principais horários de liquidez do mercado, geralmente entre 08:00 e 18:00 (horário de Brasília).</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><span data-i18n="faq4_q">Qual corretora devo usar?</span> <span>+</span></div>
+                <div class="faq-answer" data-i18n="faq4_a">Nossos sinais funcionam em qualquer corretora de opções binárias que ofereça os pares de moedas analisados.</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <a href="#" class="cta-button" data-i18n="footer_cta">QUERO MEU ACESSO AGORA</a>
+            <p class="disclaimer" data-i18n="disclaimer">
+                <strong>Aviso de risco:</strong> As opções binárias envolvem risco significativo de perda do capital investido. A negociação de instrumentos financeiros pode não ser adequada para todos os investidores. Certifique-se de compreender totalmente os riscos envolvidos e negocie apenas com o capital que você pode se dar ao luxo de perder. Resultados passados não são garantia de lucros futuros. Esta página e o grupo de sinais não constituem aconselhamento financeiro ou recomendação de investimento.
+            </p>
+            <p class="copyright">&copy; 2026 SALA DE SINAIS VIP. <span data-i18n="copyright">Todos os direitos reservados.</span></p>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            'pt-BR': {
+                meta_title: "SALA DE SINAIS VIP - Acesso Gratuito",
+                meta_desc: "Entre para a Sala de Sinais VIP Gratuita e receba análises diárias de opções binárias diretamente no seu Telegram.",
+                header_badge: "Acesso Gratuito",
+                hero_h1: "Entre para a Sala de Sinais VIP Gratuita e Comece a Lucrar Hoje",
+                hero_p: "Receba diariamente análises de mercado e sinais de alta assertividade diretamente no seu celular. Sem mensalidades, sem pegadinhas.",
+                cta_main: "ENTRAR NO GRUPO VIP GRATUITO",
+                urgency: "⚠️ Restam apenas 14 vagas gratuitas disponíveis",
+                stat_members: "Membros Ativos",
+                stat_accuracy: "Assertividade Média",
+                stat_support: "Suporte",
+                benefits_title: "Por que participar do nosso grupo?",
+                benefit1_h3: "Sinais em Tempo Real",
+                benefit1_p: "Notificações instantâneas com par de moedas, direção e tempo de expiração.",
+                benefit2_h3: "Análises Técnicas",
+                benefit2_p: "Não enviamos apenas sinais, compartilhamos a visão por trás de cada entrada.",
+                benefit3_h3: "100% Gratuito",
+                benefit3_p: "Você não paga nada para entrar e permanecer no grupo VIP de sinais.",
+                how_title: "Como funciona em 3 passos",
+                step1_h3: "Entre no Grupo",
+                step1_p: "Clique no botão de acesso e entre instantaneamente na nossa comunidade no Telegram.",
+                step2_h3: "Receba as Notificações",
+                step2_p: "Fique atento ao seu celular. Nossos analistas enviam as oportunidades assim que identificadas.",
+                step3_h3: "Copie e Acompanhe",
+                step3_p: "Execute as operações na sua corretora de preferência e acompanhe os resultados diários.",
+                founder_title: "QUEM ESTÁ POR TRÁS",
+                founder_badge: "Fundador da Sala de Sinais VIP",
+                founder_name: "Conheça Victor Paixão",
+                founder_bio: "Com mais de 7 anos de experiência no mercado financeiro, Victor Paixão desenvolveu metodologias exclusivas para identificar padrões de alta probabilidade. Sua missão é democratizar o acesso a análises profissionais.",
+                founder_tag1: "Trader experiente",
+                founder_tag2: "Análises diárias",
+                founder_tag3: "Comunidade ativa",
+                testi_title: "O que dizem nossos membros",
+                testi1_text: "\"No começo achei que era golpe por ser de graça, mas os sinais são realmente profissionais. Recomendo muito!\"",
+                testi2_text: "\"A assertividade é incrível. O grupo me ajudou a entender melhor o mercado enquanto eu lucrava com os sinais.\"",
+                testi3_text: "\"Melhor sala de sinais que já participei. Sem enrolação e direto ao ponto.\"",
+                faq_title: "Dúvidas Frequentes",
+                faq1_q: "É realmente gratuito?",
+                faq1_a: "Sim, o acesso ao nosso grupo VIP de sinais no Telegram é 100% gratuito. Não cobramos mensalidades nem taxas de adesão.",
+                faq2_q: "Preciso ter experiência?",
+                faq2_a: "Não. Nossos sinais são fáceis de seguir, ideais tanto para iniciantes quanto para traders experientes que buscam otimizar seu tempo.",
+                faq3_q: "Quais horários os sinais são enviados?",
+                faq3_a: "Enviamos sinais nos principais horários de liquidez do mercado, geralmente entre 08:00 e 18:00 (horário de Brasília).",
+                faq4_q: "Qual corretora devo usar?",
+                faq4_a: "Nossos sinais funcionam em qualquer corretora de opções binárias que ofereça os pares de moedas analisados.",
+                footer_cta: "QUERO MEU ACESSO AGORA",
+                disclaimer: "Aviso de risco: As opções binárias envolvem risco significativo de perda do capital investido. A negociação de instrumentos financeiros pode não ser adequada para todos os investidores. Certifique-se de compreender totalmente os riscos envolvidos e negocie apenas com o capital que você pode se dar ao luxo de perder. Resultados passados não são garantia de lucros futuros. Esta página e o grupo de sinais não constituem aconselhamento financeiro ou recomendação de investimento.",
+                copyright: "Todos os direitos reservados."
+            },
+            'es-ES': {
+                meta_title: "SALA DE SEÑALES VIP - Acceso Gratis",
+                meta_desc: "Únete a la Sala de Señales VIP Gratuita y recibe análisis diarios de opciones binarias directamente en tu Telegram.",
+                header_badge: "Acceso Gratis",
+                hero_h1: "Únete a la Sala de Señales VIP Gratuita y Empieza a Lucrar Hoy",
+                hero_p: "Recibe diariamente análisis de mercado y señales de alta asertividad directamente en tu móvil. Sin mensualidades, sin trucos.",
+                cta_main: "ENTRAR AL GRUPO VIP GRATIS",
+                urgency: "⚠️ Quedan solo 14 plazas gratuitas disponibles",
+                stat_members: "Miembros Activos",
+                stat_accuracy: "Asertividad Media",
+                stat_support: "Soporte",
+                benefits_title: "¿Por qué participar en nuestro grupo?",
+                benefit1_h3: "Señales en Tiempo Real",
+                benefit1_p: "Notificaciones instantáneas con par de divisas, dirección y tiempo de expiración.",
+                benefit2_h3: "Análisis Técnicos",
+                benefit2_p: "No enviamos solo señales, compartimos la visión detrás de cada entrada.",
+                benefit3_h3: "100% Gratis",
+                benefit3_p: "No pagas nada para entrar y permanecer en el grupo VIP de señales.",
+                how_title: "Cómo funciona en 3 pasos",
+                step1_h3: "Entra al Grupo",
+                step1_p: "Haz clic en el botón de acceso y entra instantáneamente en nuestra comunidad en Telegram.",
+                step2_h3: "Recibe las Notificaciones",
+                step2_p: "Estate atento a tu móvil. Nuestros analistas envían las oportunidades tan pronto como se identifican.",
+                step3_h3: "Copia y Acompaña",
+                step3_p: "Ejecuta las operaciones en tu corredor de preferencia y sigue los resultados diarios.",
+                founder_title: "QUIÉN ESTÁ DETRÁS",
+                founder_badge: "Fundador de la Sala de Señales VIP",
+                founder_name: "Conoce a Victor Paixão",
+                founder_bio: "Con más de 7 años de experiencia en el mercado financiero, Victor Paixão desarrolló metodologías exclusivas para identificar patrones de alta probabilidad. Su misión es democratizar el acceso a análisis profesionales.",
+                founder_tag1: "Trader experimentado",
+                founder_tag2: "Análisis diarios",
+                founder_tag3: "Comunidad activa",
+                testi_title: "Lo que dicen nuestros miembros",
+                testi1_text: "\"Al principio pensé que era una estafa por ser gratis, pero las señales son realmente profesionales. ¡Lo recomiendo mucho!\"",
+                testi2_text: "\"La asertividad es increíble. El grupo me ayudó a entender mejor el mercado mientras lucraba con las señales.\"",
+                testi3_text: "\"La mejor sala de señales en la que he participado. Sin rodeos y directo al grano.\"",
+                faq_title: "Preguntas Frecuentes",
+                faq1_q: "¿Es realmente gratis?",
+                faq1_a: "Sí, el acceso a nuestro grupo VIP de señales en Telegram es 100% gratis. No cobramos mensualidades ni cuotas de inscripción.",
+                faq2_q: "¿Necesito tener experiencia?",
+                faq2_a: "No. Nuestras señales son fáciles de seguir, ideales tanto para principiantes como para traders experimentados que buscan optimizar su tiempo.",
+                faq3_q: "¿En qué horarios se envían las señales?",
+                faq3_a: "Enviamos señales en los principales horarios de liquidez del mercado, generalmente entre las 08:00 y las 18:00 (hora de Brasilia).",
+                faq4_q: "¿Qué corredor debo usar?",
+                faq4_a: "Nuestras señales funcionan en cualquier corredor de opciones binarias que ofrezca los pares de divisas analizados.",
+                footer_cta: "QUIERO MI ACCESO AHORA",
+                disclaimer: "Aviso de riesgo: Las opciones binarias implican un riesgo significativo de pérdida del capital invertido. La negociación de instrumentos financieros puede no ser adecuada para todos los inversores. Asegúrese de comprender totalmente los riesgos involucrados y opere solo con el capital que pueda permitirse perder. Los resultados pasados no son garantía de ganancias futuras. Esta página y el grupo de señales no constituyen asesoramiento financiero ni recomendación de inversión.",
+                copyright: "Todos los derechos reservados."
+            },
+            'en-US': {
+                meta_title: "VIP SIGNALS ROOM - Free Access",
+                meta_desc: "Join the Free VIP Signals Room and receive daily binary options analysis directly on your Telegram.",
+                header_badge: "Free Access",
+                hero_h1: "Join the Free VIP Signals Room and Start Profiting Today",
+                hero_p: "Receive daily market analysis and high-accuracy signals directly on your phone. No monthly fees, no tricks.",
+                cta_main: "JOIN THE FREE VIP GROUP",
+                urgency: "⚠️ Only 14 free spots remaining",
+                stat_members: "Active Members",
+                stat_accuracy: "Average Accuracy",
+                stat_support: "Support",
+                benefits_title: "Why join our group?",
+                benefit1_h3: "Real-Time Signals",
+                benefit1_p: "Instant notifications with currency pair, direction, and expiration time.",
+                benefit2_h3: "Technical Analysis",
+                benefit2_p: "We don't just send signals, we share the vision behind every entry.",
+                benefit3_h3: "100% Free",
+                benefit3_p: "You pay nothing to join and stay in the VIP signals group.",
+                how_title: "How it works in 3 steps",
+                step1_h3: "Join the Group",
+                step1_p: "Click the access button and instantly join our community on Telegram.",
+                step2_h3: "Receive Notifications",
+                step2_p: "Stay tuned to your phone. Our analysts send opportunities as soon as they are identified.",
+                step3_h3: "Copy and Track",
+                step3_p: "Execute trades on your preferred broker and track daily results.",
+                founder_title: "WHO'S BEHIND IT",
+                founder_badge: "Founder of the VIP Signals Room",
+                founder_name: "Meet Victor Paixão",
+                founder_bio: "With over 7 years of experience in the financial market, Victor Paixão developed exclusive methodologies to identify high-probability patterns. His mission is to democratize access to professional analysis.",
+                founder_tag1: "Experienced trader",
+                founder_tag2: "Daily analysis",
+                founder_tag3: "Active community",
+                testi_title: "What our members say",
+                testi1_text: "\"At first I thought it was a scam because it's free, but the signals are truly professional. I highly recommend it!\"",
+                testi2_text: "\"The accuracy is incredible. The group helped me understand the market better while I profited from the signals.\"",
+                testi3_text: "\"Best signals room I've ever joined. No fluff and straight to the point.\"",
+                faq_title: "Frequently Asked Questions",
+                faq1_q: "Is it really free?",
+                faq1_a: "Yes, access to our VIP signals group on Telegram is 100% free. We do not charge monthly fees or joining fees.",
+                faq2_q: "Do I need experience?",
+                faq2_a: "No. Our signals are easy to follow, ideal for both beginners and experienced traders looking to optimize their time.",
+                faq3_q: "What times are the signals sent?",
+                faq3_a: "We send signals during the main market liquidity hours, usually between 08:00 and 18:00 (Brasilia time).",
+                faq4_q: "Which broker should I use?",
+                faq4_a: "Our signals work on any binary options broker that offers the analyzed currency pairs.",
+                footer_cta: "I WANT MY ACCESS NOW",
+                disclaimer: "Risk Warning: Binary options involve significant risk of loss of invested capital. Trading financial instruments may not be suitable for all investors. Ensure you fully understand the risks involved and trade only with capital you can afford to lose. Past results are no guarantee of future profits. This page and the signals group do not constitute financial advice or investment recommendation.",
+                copyright: "All rights reserved."
+            }
+        };
+
+        function setLanguage(lang) {
+            localStorage.setItem('preferredLang', lang);
+            document.documentElement.lang = lang;
+
+            // Update text elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.innerText = translations[lang][key];
+                }
+            });
+
+            // Update meta tags
+            const metaTitle = document.querySelector('title');
+            const metaDesc = document.querySelector('meta[name="description"]');
+            const ogTitle = document.querySelector('meta[property="og:title"]');
+            const ogDesc = document.querySelector('meta[property="og:description"]');
+
+            if(metaTitle) metaTitle.innerText = translations[lang].meta_title;
+            if(metaDesc) metaDesc.setAttribute('content', translations[lang].meta_desc);
+            if(ogTitle) ogTitle.setAttribute('content', translations[lang].meta_title);
+            if(ogDesc) ogDesc.setAttribute('content', translations[lang].meta_desc);
+
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-lang') === lang) btn.classList.add('active');
+            });
+        }
+
+        // Initialize Language
+        window.addEventListener('DOMContentLoaded', () => {
+            let userLang = localStorage.getItem('preferredLang') || navigator.language || 'en-US';
+            if (userLang.startsWith('pt')) userLang = 'pt-BR';
+            else if (userLang.startsWith('es')) userLang = 'es-ES';
+            else userLang = 'en-US';
+            
+            setLanguage(userLang);
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                question.parentElement.classList.toggle('active');
+            });
+        });
+
+        // Pixel Tracking
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', () => {
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'Lead');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
